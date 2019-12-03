@@ -1,0 +1,23 @@
+{
+  "name": "graphql-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "sagar-more",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.17.1",
+    "express-graphql": "0.9.0",
+    "graphql": "14.5.8",
+    "periodic-table": "0.0.8"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.1"
+  }
+}
