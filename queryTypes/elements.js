@@ -43,7 +43,14 @@ const RootQuery = new GraphQLObjectType({
         elements: {
             type: new GraphQLList(elementsType),
             resolve(parentValue, args) {
-                return periodicTable.all();
+                const keysList = Object.keys(args);
+                const allElements = periodicTable.all();
+                if (!keysList.length) {
+                    return [];
+                } else {
+                    const element = allElements.find((element) => element[keysList[0]].toString() === args[keysList[0]]);
+                    return [element];
+                }
             },
             args: {
                 atomicNumber: { type: GraphQLString },
