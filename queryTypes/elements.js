@@ -46,7 +46,7 @@ const RootQuery = new GraphQLObjectType({
                 const keysList = Object.keys(args);
                 const allElements = periodicTable.all();
                 if (!keysList.length) {
-                    return [];
+                    return periodicTable.all();
                 } else {
                     const element = allElements.find((element) => element[keysList[0]].toString() === args[keysList[0]]);
                     return [element];
